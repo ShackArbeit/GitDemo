@@ -55,13 +55,19 @@ import Input from '@mui/material/Input';
 
   // 這裡定義根據輸入的文字進行返回不同內容的函式
   const displayMatches = (e) => {
+    // 變數 value 為使用者輸入不同子母的值
     const { value } = e.target;
+  // 將 value 放進變數 searchTerm 內，注意 searchTerm 原本是 null 
     setSearchTerm(value);
+  //  將定義過的函式 findMatches  放進變數  matchArray 內
     const matchArray = findMatches(value, cities);
+  // 若沒有輸入任何字母若刪除字母，則將變數 suggestions 返回初始值空陣列
+  // 也就是結果列表為空陣列，沒有值
     if (value === '') {
        setSuggestions([]);
        return;
      }
+  // 變數 html 內裡面的值是已經先經過 matchArray (findMatches 函式) 經過正則表達式所篩選出來的值
     const html = matchArray.map(place => {
       const regex = new RegExp(value, 'gi');
       const cityName = place.city.replace(regex, `<span class="hl">${value}</span>`);
@@ -72,9 +78,10 @@ import Input from '@mui/material/Input';
            <span className="population">{numberWithCommas(place.population)}</span>
          </li>
        )})
+  //  將篩選出來的值放進 Dom 元素後再放進初始值為空陣列的 suggestions 變數內
+  // 這樣 suggestions 可以是這樣 suggestions=[{Losangle,33333},{New York,444444}.......]
     setSuggestions(html);
-    
- };
+  }
 
   return (
     <main className="min-h-screen p-24 ">
