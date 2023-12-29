@@ -84,6 +84,7 @@ import Input from '@mui/material/Input';
   }
 
   return (
+  // 這裡的 CSS Style 是使用 Tailwind 
     <main className="min-h-screen p-24 ">
       <div className="w-full">
         <Image
@@ -96,6 +97,7 @@ import Input from '@mui/material/Input';
         />
       </div>
       <Box
+      //  這裡使用 Material MUI 的 sx props 設定 CSS 樣式
         sx={{
           py: 2,
           display: 'grid',
