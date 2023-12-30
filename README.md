@@ -10,3 +10,7 @@
 
 
 有關清除輸入框後列表就會消失的部分，我是直接設定當輸入框內容為 null，返回一個 null array，只是效果僅止於對第一個所輸入的字母有效。
+
+
+
+有關 Deploy 部分，是使用 Cloud Flare ，因為 Github Page 有關 Static Export 部分因版本性的問題， Try 幾次後覺得先用 Cloud Falre Deploy 會更快，不過之後若靜態網頁仍以 Github Page 優先會更好，因為每一次 Push 後都可以直接在 Action 中做及時更新。
