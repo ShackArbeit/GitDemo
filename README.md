@@ -1,4 +1,4 @@
-因為時間需求，使用 NextJs 將原 https://codepen.io/tariso/pen/LyoaRM 裡面的 Codes 並直接給寫成 JSX 語法，不少的 functions 大部分相同，多了一些 React Hook 狀態管理
+因為時間需求，使用 NextJs 將原 https://codepen.io/tariso/pen/LyoaRM 裡面的 Codes 並直接給寫成 JSX 語法，不少的 functions 大部分相同，多了一些 React Hook 狀態管理 ( 這裡並沒有使用 TypeScript ，更嚴謹使用 TypeScript 會更好 )
 
 
 會使用 NextJs 是因為文件有要求儘量不要從外部的連結 fetch 資料，我用了一種 Hard Coding 方法，將外部連結內容 Copy 一份到 Local 端資料夾內，並使用 NextJs 的 API End Point ，直接 fetch ; 其實這裡也可以使用 ReactJs 並使用 import ...方法，將外部連結的內容以變數形式引入，可達到同樣的效果。
